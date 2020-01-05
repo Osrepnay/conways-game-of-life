@@ -1,7 +1,5 @@
 package gol;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GraphicsEnvironment;
@@ -10,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -43,9 +40,6 @@ public class GOL{
 		int[] boardSizeTemp=new int[]{Integer.valueOf(boardSizeString[0]), Integer.valueOf(boardSizeString[1])};
 		boardSize=boardSizeTemp;
 		board=new boolean[boardSize[0]][boardSize[1]];
-		board[10][10]=true;
-		board[9][10]=true;
-		board[11][10]=true;
 		
 		frame=new JFrame();
 		GraphicsEnvironment ge=GraphicsEnvironment.getLocalGraphicsEnvironment();
