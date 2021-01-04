@@ -15,6 +15,7 @@ import javax.swing.UIManager;
 public class GOL{
 	boolean[][] board;
 	int[] boardSize;
+	long sleepTime;
 	boolean paused=true;
 	Thread gameLoop;
 	JFrame frame;
@@ -39,6 +40,7 @@ public class GOL{
 		
 		int[] boardSizeTemp=new int[]{Integer.valueOf(boardSizeString[0]), Integer.valueOf(boardSizeString[1])};
 		boardSize=boardSizeTemp;
+		sleepTime=Long.valueOf(boardSizeString[2]);
 		board=new boolean[boardSize[0]][boardSize[1]];
 		
 		frame=new JFrame();
@@ -119,7 +121,7 @@ public class GOL{
 					//printBoard(board);
 					panel.repaint();
 					try{
-						Thread.sleep(1000);
+						Thread.sleep(sleepTime);
 					}catch(Exception e){System.err.println(e);}
 				}
 				System.out.print("");
